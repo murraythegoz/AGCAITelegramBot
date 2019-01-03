@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+	<webhook name="production">
+		<updater>"put-your-production-webhook-here"</updater>
+	</webhook>
+	<webhook name="test">
+		<updater>"put-your-test-webhook-here"</updater>
+	</webhook>
+</data>

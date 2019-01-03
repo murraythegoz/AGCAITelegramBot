@@ -1,0 +1,176 @@
+﻿<?xml version="1.0"?>
+<data>
+    <usetestwebhook>0</usetestwebhook>
+    <anno>2019</anno>
+    <gita_ag name="gita">
+        <prossima_gita>gennaio</prossima_gita>
+        <ultima_gita>gennaio</ultima_gita>
+    </gita_ag>
+    <sede>
+        <apertura>martedi e giovedi dalle 21 alle 22</apertura>
+        <indirizzo>via Giardini,8 - 20099 - Sesto San Giovanni</indirizzo>
+        <telefono>02 2426875</telefono>
+        <email>caisesto@tiscali.it</email>
+        <telegram_group>https://t.me/ag_cai_sestosg</telegram_group>
+    </sede>
+    <accompagnatori_ag>
+        <accompagnatore>Bottanelli Lino</accompagnatore>
+        <accompagnatore>Brunello Ivan +39 328 8660991</accompagnatore>
+        <accompagnatore>Cardinale Liana</accompagnatore>
+        <accompagnatore>Di Filippo Piero</accompagnatore>
+        <accompagnatore>Duse Giuseppe</accompagnatore>
+        <accompagnatore>Fierro Giuseppe</accompagnatore>
+        <accompagnatore>Galletti Giuseppe</accompagnatore>
+        <accompagnatore>Giammarusti Marilena</accompagnatore>
+        <accompagnatore>Guaglio Giampiero</accompagnatore>
+        <accompagnatore>Lissoni Renzo +39 338 2924806</accompagnatore>
+        <accompagnatore>Rizzi Sergio +39 348 2511570</accompagnatore>
+        <accompagnatore>Verduci Veronica</accompagnatore>
+    </accompagnatori_ag>
+    <calendario_ag>
+        <gita name="gennaio">
+            <date>Domenica 20 Gennaio</date>
+            <destinazione>Sentiero Manzoniano - Lecco, Rifugio Stoppani, Campo dei Boi</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 17 gennaio</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 18 gennaio</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/01/GENNAIO_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="febbraio">
+            <date>Domenica 17 Febbraio</date>
+            <destinazione>Savogno</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro martedi 12 febbraio</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 14 febbraio</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/02/FEBBRAIO_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="marzo">
+            <date>Domenica 17 Marzo</date>
+            <destinazione>Cascata del Cenghen - Grigna</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 14 marzo</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 15 marzo</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/03/MARZO_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="aprile">
+            <date>Domenica 14 Aprile</date>
+            <destinazione>Biciclettata - Sesto-Monza-Sesto</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 11 aprile</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 12 aprile</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/04/APRILE_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="maggio">
+            <date>Sabato 4-Domenica 5 Maggio</date>
+            <destinazione>Sondrio-Aprica-Rifugio Cristina</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 2 maggio</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 3 maggio</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/05/MAGGIO_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="settembre">
+            <date>Domenica 22 Settembre</date>
+            <destinazione>Rifugio Azzoni</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 19 settembre</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 20 settembre</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/09/SETTEMBRE_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="ottobre">
+            <date>Domenica 6 Ottobre</date>
+            <destinazione>Olgiate: Castagnata con il CAI di Calco</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 3 ottobre</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 4 ottobre</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/10/OTTOBRE_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="baitone">
+        	<date>Weekend da definirsi</date>
+            <destinazione>Baitone</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 11 ottobre</conferma_data>
+            <disdetta_data>entro e non oltre giovedì 18 ottobre</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/10/OTTOBRE_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="novembre">
+            <date>Domenica 17 Novembre</date>
+            <destinazione>Brunate - Asso</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 14 novembre</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 15 novembre</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/11/NOVEMBRE_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="dicembre">
+            <date>Domenica 15 Dicembre</date>
+            <destinazione>Sentieri Urbani: Milano - Chiaravalle</destinazione>
+            <ritrovo>Ritrovo alla Stazione FS di Sesto S.G. alle x.xx, rientro previsto xx.xx</ritrovo>
+            <conferma_data>entro giovedi 12 dicembre</conferma_data>
+            <disdetta_data>entro e non oltre venerdi 13 dicembre</disdetta_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo>XX Euro</costo>
+            <notiziario>http://www.caisestosg.it/wp-content/uploads/2018/12/DICEMBRE_2018.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <gita name="serata">
+            <date>Mercoledì 18 dicembre</date>
+            <destinazione>Serata di Natale presso la sede CAI di Sesto S.G.</destinazione>
+            <ritrovo>Ritrovo alla sede del CAI di Sesto, in via Giardini,8 alle 21</ritrovo>
+            <conferma_data>nessuna conferma</conferma_data>
+            <conferma_rif>via email o telefonando in sede durante gli orari di apertura</conferma_rif>
+            <costo> una torta </costo>
+            <notiziario>http://www.caisestosg.it/download/cms_upload/ng13_18.pdf</notiziario>
+            <percorso>no</percorso>
+            <altimetria>no</altimetria>
+            <foto>no</foto>
+        </gita>
+        <url_agendina>http://www.caisestosg.it/wp-content/uploads/2018/12/CAI-Agendina-2019.pdf</url_agendina>
+    </calendario_ag>
+</data>
+
