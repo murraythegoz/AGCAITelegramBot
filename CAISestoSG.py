@@ -1,7 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 # Simple Bot to reply to Telegram messages
+# python library must be installed with command "pip3 install python-telegram-bot"
 # This program is dedicated to the public domain under the CC0 license.
 """
 This Bot uses the Updater class to handle the bot.
@@ -21,14 +22,12 @@ bot.
 ##prossima_gita_ag - Info prossima gita AG
 ##ultima_gita_ag - Info ultima gita AG effettuata
 ##sede - Orari e riferimenti sede
-##per_il_resto_chiedete_a_ivan - Il vostro aiutante di fiducia
 
 from uuid import uuid4
 
 import re
 import os
 import sys
-###import xml.etree.cElementTree as StringParseXML
 import xml.etree.ElementTree as StringParseXML
 from telegram import InlineQueryResultArticle, ParseMode, \
     InputTextMessageContent
@@ -39,30 +38,21 @@ import logging
 #http://stackoverflow.com/questions/4060221/how-to-reliably-open-a-file-in-the-same-directory-as-a-python-script
 # location is set at command invocation.
 __location__ = os.path.dirname(os.path.abspath(sys.argv[0]))
-#print os.path.basename(sys.argv[0])
-#print __location__
 
 #XML Config is located in same path of script.
 #Configuration name is same as script name, but with an "xml" extension instead of "py"
 ScriptName = os.path.basename(sys.argv[0])
 XMLConfig = os.path.join(__location__, ScriptName.replace(".py", ".xml"))
-#print XMLConfig
 
 def getXMLconfig():
     #XML Config is located in same path of script.
     #Configuration name is same as script name, but with an "xml" extension instead of "py"
     ScriptName = os.path.basename(sys.argv[0])
     XMLConfig = os.path.join(__location__, ScriptName.replace(".py", ".xml"))
-    #print XMLConfig
 
     tree = StringParseXML.parse(XMLConfig)
     StringParse = tree.getroot()
     return StringParse
-
-###tree = StringParseXML.parse(XMLConfig)
-###xmltree = getXMLconfig()
-
-##StringParse = tree.getroot()
 
 #weekhook setup
 #webhooks.xml usually contains two sets of webhooks: test and production webhooks,
@@ -76,7 +66,7 @@ def getwebhooks():
         UpdaterWebHook=WebHooksStringParse.find(".//webhook[@name='production']/updater").text
     else:
         UpdaterWebHook=WebHooksStringParse.find(".//webhook[@name='test']/updater").text
-    print UpdaterWebHook
+    print (UpdaterWebHook)
     return UpdaterWebHook
 
 
@@ -88,23 +78,22 @@ logger = logging.getLogger(__name__)
 
 # Define a few command handlers. These usually take the two arguments bot and
 # update. Error handlers also receive the raised TelegramError object in error.
-def start(bot, update):
-    update.message.reply_text('Hi!')
+def start(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text='Hi!')
 
+def help(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text='Help!')
 
-def help(bot, update):
-    update.message.reply_text('Help!')
-
-def accompagnatori_ag(bot, update):
+def accompagnatori_ag(update, context):
     xmltree = getXMLconfig()
-    text_elenco_accompagnatori = ''
+    text_elenco_accompagnatori = 'Accompagnatori (quelli con "*" sono nella chat ):\n'
     for elem in xmltree.findall('accompagnatori_ag/accompagnatore'):
         text_elenco_accompagnatori += elem.text
         text_elenco_accompagnatori += '\n'
-    
-    update.message.reply_text('Accompagnatori (quelli con "*" sono nella chat ):\n' + text_elenco_accompagnatori)
 
-def calendario_ag(bot, update):
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text_elenco_accompagnatori)
+
+def calendario_ag(update, context):
     xmltree = getXMLconfig()    
     text_calendario = ''
     text_calendario = 'Calendario AG ' 
@@ -127,9 +116,9 @@ def calendario_ag(bot, update):
     text_calendario += '\n\n\nScarica l\'agendina:\n'
     text_calendario += xmltree.find('calendario_ag/url_agendina').text
 
-    update.message.reply_text(text_calendario)
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text_calendario)
 
-def prossima_gita_ag(bot, update):
+def prossima_gita_ag(update, context):
     xmltree = getXMLconfig()
     text_prossima_gita = ''
     index_prossima_gita = xmltree.find('gita_ag/prossima_gita').text
@@ -152,10 +141,10 @@ def prossima_gita_ag(bot, update):
         text_prossima_gita += xmltree.find(".//calendario_ag/gita[@name='" + index_prossima_gita + "']/costo").text
     text_prossima_gita += '\nNotiziario:\n'
     text_prossima_gita += xmltree.find(".//calendario_ag/gita[@name='" + index_prossima_gita + "']/notiziario").text
-    
-    update.message.reply_text(text_prossima_gita)
 
-def sede(bot, update):
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text_prossima_gita)
+
+def sede(update, context):
     xmltree = getXMLconfig()
     text_sede_cai = ''
     text_sede_cai = 'La sede è aperta '
@@ -169,9 +158,9 @@ def sede(bot, update):
     text_sede_cai += '\ngruppo telegram AG: \n '
     text_sede_cai += xmltree.find('sede/telegram_group').text
 
-    update.message.reply_text(text_sede_cai)
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text_sede_cai)
 
-def ultima_gita_ag(bot, update):
+def ultima_gita_ag(update, context):
     xmltree = getXMLconfig()    
     text_ultima_gita = ''
     index_ultima_gita = xmltree.find('gita_ag/ultima_gita').text
@@ -191,13 +180,8 @@ def ultima_gita_ag(bot, update):
         text_foto = xmltree.find(".//calendario_ag/gita[@name='" + index_ultima_gita + "']/foto").text
         text_ultima_gita += text_foto.replace("%26", "&")
 
-    update.message.reply_text(text_ultima_gita)
+    context.bot.send_message(chat_id=update.effective_chat.id, text=text_ultima_gita)
 
-def ivan_help(bot, update):
-    text_ivan_help = 'Ivan, il vostro nerd/climber/accompagnatore AG/massaggiatore thai di fiducia \n'
-    text_ivan_help += 'e\' contattabile al numero +393288660991, o su telegram come @theQuillan'
-
-    update.message.reply_text(text_ivan_help)
 
 def escape_markdown(text):
     """Helper function to escape telegram markup symbols"""
@@ -234,20 +218,14 @@ def error(bot, update, error):
 
 def main():
     # Create the Updater and pass it your bot's token.
-    # main bot
-    #updater = Updater("273270658:AAF9aFXNQMJVCIC7zkRz2wTq3Di_pu5K27Q")
-    # test bot
-    #updater = Updater("271724007:AAER6CE14p9i1ofjHwu2x7BaConwzsITyOI")
     WebHook = getwebhooks()
-    updater = Updater(WebHook.replace("\"",""))
+    updater = Updater(WebHook.replace("\"",""), use_context=True)
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
 
 
-    #populate the text strings based on data file
-
-
     # on different commands - answer in Telegram
+
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CommandHandler("sede", sede))
@@ -256,7 +234,6 @@ def main():
     dp.add_handler(CommandHandler("ultima_gita_ag",ultima_gita_ag))
     dp.add_handler(CommandHandler("accompagnatori_ag",accompagnatori_ag))
     dp.add_handler(CommandHandler("calendario_ag",calendario_ag))
-    dp.add_handler(CommandHandler("per_il_resto_chiedete_a_ivan",ivan_help))
 
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(InlineQueryHandler(inlinequery))
@@ -275,4 +252,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
